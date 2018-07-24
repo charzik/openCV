@@ -12,7 +12,7 @@ void myShowImg(const string& fileName) {
             if (i % 20 == 0 || j % 20 == 0) {
                 image.at<Vec3b>(i, j)[0] = 0;
                 image.at<Vec3b>(i, j)[1] = 0;
-                image.at<Vec3b>(i, j)[1] = 0;
+                image.at<Vec3b>(i, j)[2] = 0;
             }
         }
     }
