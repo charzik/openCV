@@ -13,7 +13,8 @@ void applyFilter(const string& fileName, const Mat& kernel) {
             float newVal = 0;
             for (int g = 0; g < kernel.rows; ++ g)
                 for (int k = 0; k < kernel.cols; ++k) {
-                    newVal += kernel.at<float>(g, k) * image.at<uchar>(i + g - band, j + k - band);
+                    newVal += kernel.at<float>(g, k) * 
+                              image.at<uchar>(i + g - band, j + k - band);
                 }
             if (newVal < 0)
                 newImage.at<uchar>(i, j) = 0;
